@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+.sideContainer {
+    border: 2px solid blue;
+    margin: 0;
+    padding: 05px;
+    position: fixed;
+    overflow: auto;
+    width: 200px;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+.sideElements {
+    background-color: aqua;
+    position: relative;
+    left: -250px;
+    transition: 0.3s;
+}
+
+.sideElements a{
+    display: block;
+    margin: 20px;
+    font-size: 20px;
+}
+
+
