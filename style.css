@@ -1,19 +1,62 @@
 body {
     margin: 0;
+    padding: 0;
 }
+
+.mainContainer {
+    display: grid;
+    grid-template: repeat(4, 1fr)  / 224px 1fr;
+}
+
+.nav {
+    grid-column: 2 / 3;
+    border: 2px solid red;
+    height: 150px;
+    padding: 1em;
+}
+
+.nav > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.nav > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav form {
+    display: flex;
+    border-radius: 1em;
+    flex: 0.75;
+    margin: 1.5em 0 1.5em 1.5em;
+    padding: 0 0.5em;
+}
+
+.nav input {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    border-radius: 1.5em;
+    box-shadow: inset 0 0 10px 0 rgb(0 0 0 / 40%)
+}
+
 
 .sideContainer {
     border: 2px solid blue;
     margin: 0;
-    padding: 05px;
+    padding: 0px;
     position: fixed;
-    overflow: auto;
-    width: 200px;
-    height: 100%;
-    background-color: blueviolet;
+    width: 220px;
 }
 
 .sideElements {
+    border: 2px solid grey;
     background-color: aqua;
     position: relative;
     left: -250px;
@@ -22,8 +65,9 @@ body {
 
 .sideElements a{
     display: block;
-    margin: 20px;
-    font-size: 20px;
+    padding-top: 10px;
+    font-size: 25px;
+    padding: 20px;
 }
 
 
