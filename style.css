@@ -10,11 +10,12 @@ body {
 
 .mainContainer {
     display: grid;
-    grid-template: repeat(4, 1fr)  / 224px 1fr;
+    grid-template: repeat(4, 150px) / 230px 2fr 1fr;
+    box-sizing: border-box;
 }
 
 .nav {
-    grid-column: 2 / 3;
+    grid-column: 2 / 4;
     background-color: #475569;
     box-shadow: 0 6px 10px -4px;
 }
@@ -49,22 +50,6 @@ body {
     margin-right: 20px;
 }
 
-/*nav buttons*/
-.buttons button{
-    border-radius: 7px;
-    height: 30px;
-    width: 80px;
-    margin: 5px;
-    transition: 0.3s ease-out;
-    background:  linear-gradient(to left, rgb(33, 143, 216) 50%, rgb(98, 228, 38) 50%) right;
-    background-size: 200%;
-}
-
-.buttons button:hover {
-    box-shadow: 0 0 20px 5px rgb(255, 255, 255);
-    background-position: left;
-}
-
 /*nav search bar*/
 .nav form {
     display: flex;
@@ -83,6 +68,22 @@ body {
     height: 30px;
 }
 
+/*nav buttons*/
+.buttons button{
+    border-radius: 7px;
+    height: 30px;
+    width: 80px;
+    margin: 5px;
+    transition: 0.3s ease-out;
+    background:  linear-gradient(to left, rgb(33, 143, 216) 50%, rgb(98, 228, 38) 50%) right;
+    background-size: 200%;
+}
+
+.buttons button:hover {
+    box-shadow: 0 0 20px 5px rgb(255, 255, 255);
+    background-position: left;
+}
+
 .upperHalf form svg {
     padding-right: 10px;
     padding-top: 3px;
@@ -96,11 +97,12 @@ body {
 }
 
 .sideContainer {
+    width: 230px;
     position: fixed;
-    width: 224px;
     height: 100%;
     background-color: #3f3f46;
     box-shadow: 0 4px 7px 0;
+
 }
 
 .sideContainer h2 {
@@ -131,3 +133,24 @@ body {
     padding-right: 10px;
 }
 
+
+.projects {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.projects img {
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.projects article {
+    align-items: stretch;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
