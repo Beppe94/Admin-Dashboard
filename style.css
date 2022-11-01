@@ -11,13 +11,11 @@ body {
 .nav {
     grid-column: 2 / 3;
     border: 2px solid red;
-    height: 150px;
-    padding: 1em;
 }
 
 .nav > div:first-child {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex: 1;
 }
@@ -25,11 +23,31 @@ body {
 .nav > div:nth-child(2) {
     display: flex;
     justify-content: space-between;
-    flex: 1;
-    flex-wrap: wrap;
     align-items: center;
 }
 
+.current {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.nav > div:nth-child(2) img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+/*nav buttons*/
+.nav > div:nth-child(2) button{
+    border-radius: 7px;
+    height: 30px;
+    width: 80px;
+    margin: 5px;
+}
+
+/*nav search bar*/
 .nav form {
     display: flex;
     border-radius: 1em;
@@ -43,8 +61,22 @@ body {
     display: flex;
     flex: 1;
     border-radius: 1.5em;
-    box-shadow: inset 0 0 10px 0 rgb(0 0 0 / 40%)
+    box-shadow: inset 0 0 10px 0 rgb(0 0 0 / 40%);
+    height: 30px;
 }
+
+.upperHalf form svg {
+    padding-right: 10px;
+    padding-top: 3px;
+}
+
+.profile {
+    position: relative;
+    display: flex;;
+    align-items: center;
+    gap: 30px;
+}
+
 
 
 .sideContainer {
@@ -55,12 +87,17 @@ body {
     width: 220px;
 }
 
+.sideElements svg {
+    padding-right: 10px;
+}
+
 .sideElements {
     border: 2px solid grey;
     background-color: aqua;
     position: relative;
     left: -250px;
     transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .sideElements a{
