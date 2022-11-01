@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    font-family: 'poppins', sans-serif, Verdana, Tahoma;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -11,6 +16,7 @@ body {
 .nav {
     grid-column: 2 / 3;
     border: 2px solid red;
+    background-color: #475569;
 }
 
 .nav > div:first-child {
@@ -39,12 +45,24 @@ body {
     height: 60px;
 }
 
+.buttons {
+    margin-right: 20px;
+}
+
 /*nav buttons*/
-.nav > div:nth-child(2) button{
+.buttons button{
     border-radius: 7px;
     height: 30px;
     width: 80px;
     margin: 5px;
+    transition: 0.3s ease-out;
+    background:  linear-gradient(to left, rgb(33, 143, 216) 50%, rgb(98, 228, 38) 50%) right;
+    background-size: 200%;
+}
+
+.buttons button:hover {
+    box-shadow: 0 0 20px 5px rgb(255, 255, 255);
+    background-position: left;
 }
 
 /*nav search bar*/
@@ -77,18 +95,19 @@ body {
     gap: 30px;
 }
 
-
-
 .sideContainer {
     border: 2px solid blue;
-    margin: 0;
-    padding: 0px;
     position: fixed;
     width: 220px;
 }
 
-.sideElements svg {
-    padding-right: 10px;
+.sideContainer h2 {
+    text-align: center;
+}
+
+.sideContainer button {
+    height: 30px;
+    width: 40px;
 }
 
 .sideElements {
@@ -102,9 +121,11 @@ body {
 
 .sideElements a{
     display: block;
-    padding-top: 10px;
-    font-size: 25px;
     padding: 20px;
+    font-size: 20px;
 }
 
+.sideElements svg {
+    padding-right: 10px;
+}
 
