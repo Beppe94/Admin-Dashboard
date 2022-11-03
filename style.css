@@ -19,6 +19,7 @@ body {
     grid-column: 2 / 4;
     background-color: #475569;
     box-shadow: 0 6px 10px -4px;
+    color: white;
 }
 
 .nav > div:first-child {
@@ -39,6 +40,16 @@ body {
     justify-content: space-around;
     gap: 10px;
     margin-left: 20px;
+}
+
+@media screen and (max-width: 700px){
+    .current {
+        font-size: 10px;
+    }
+    
+    .current img {
+        scale: 0.5;
+    }
 }
 
 .nav > div:nth-child(2) img {
@@ -76,8 +87,10 @@ body {
     width: 80px;
     margin: 5px;
     transition: 0.3s ease-out;
-    background:  linear-gradient(to left, rgb(33, 143, 216) 50%, rgb(98, 228, 38) 50%) right;
+    background:  linear-gradient(to left, rgb(33, 143, 216) 50%, rgb(172, 23, 185) 50%) right;
     background-size: 200%;
+    color: white;
+    font-weight: bold;
 }
 
 .buttons button:hover {
@@ -97,17 +110,25 @@ body {
     gap: 30px;
 }
 
+.profile a {
+    color: white;
+}
+
 .sideContainer {
     height: 100%;
     min-width: 5%;
     position: fixed;
     background-color: #3f3f46;
     box-shadow: 0 4px 7px 0;
-    padding-left: 19px;
 }
 
-.sideContainer h2 {
-    text-align: center;
+.dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    color: white;
 }
 
 .sideContainer button {
@@ -120,7 +141,10 @@ body {
     position: relative;
     left: -250px;
     transition: 0.3s;
-    box-sizing: border-box;
+}
+    
+.sideElements a:hover {
+    background-color: purple;
 }
 
 .sideElements a{
@@ -137,7 +161,7 @@ body {
 @media (min-width: 700px) {
     .projectsGrid { 
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));   
+        grid-template-columns: repeat(2, minmax(300px, 1fr));   
     }
   }
 
