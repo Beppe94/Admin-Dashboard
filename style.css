@@ -40,6 +40,7 @@ body {
     justify-content: space-around;
     gap: 10px;
     margin-left: 20px;
+    align-items: center;
 }
 
 .current img {
@@ -265,6 +266,40 @@ body {
     box-shadow: inset 5px 0 2px rgba(224, 204, 17, 0.781);
     background-color: aliceblue;
     font-size: 20px;
+}
+
+.rightPanel {
+    background-color: #687a94;
+    color: #fefefe;
+    padding: 10px;
+}
+
+.lowerHalf {
+    position: relative;
+}
+
+.lowerHalf article {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.infos {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.infos h5 {
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+
+.lowerHalf img {
+    border-radius: 34px;
+    width: 70px;
+    height: 70px;
 }
 
 footer {
