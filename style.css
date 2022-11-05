@@ -19,7 +19,7 @@ body {
     grid-column: 2 / 4;
     background-color: #475569;
     box-shadow: 0 6px 10px -4px;
-    color: white;
+    color: #fefefe;
 }
 
 .nav > div:first-child {
@@ -42,13 +42,21 @@ body {
     margin-left: 20px;
 }
 
+.current img {
+    transition: 0.5s;
+}
+
 @media screen and (max-width: 700px){
     .current {
         font-size: 10px;
     }
     
     .current img {
-        scale: 0.5;
+        scale: 0;
+    }
+
+    .upperHalf form svg {
+        scale: 0;
     }
 }
 
@@ -58,9 +66,6 @@ body {
     height: 60px;
 }
 
-.buttons {
-    margin-right: 20px;
-}
 
 /*nav search bar*/
 .nav form {
@@ -80,17 +85,34 @@ body {
     height: 30px;
 }
 
+@media screen and (max-width: 700px){
+    .nav {
+        grid-column: 1 / 4;
+    }
+    
+    .nav input {
+        width: 100px;
+    }
+    
+    .buttons button {
+        scale: 0.8;
+    }
+}
+
 /*nav buttons*/
 .buttons button{
     border-radius: 7px;
     height: 30px;
     width: 80px;
-    margin: 5px;
     transition: 0.3s ease-out;
     background:  linear-gradient(to left, rgb(33, 143, 216) 50%, rgb(172, 23, 185) 50%) right;
     background-size: 200%;
-    color: white;
+    color: #fefefe;
     font-weight: bold;
+}
+
+.buttons {
+    margin-right: 30px;
 }
 
 .buttons button:hover {
@@ -101,6 +123,7 @@ body {
 .upperHalf form svg {
     padding-right: 10px;
     padding-top: 3px;
+    transition: 0.5s;
 }
 
 .profile {
@@ -111,15 +134,44 @@ body {
 }
 
 .profile a {
-    color: white;
+    color: #fefefe;
+}
+
+@media screen and (max-width: 700px) {
+    .sideContainer {
+        width: 55px;
+        background-color: none;
+    }
+
+    .dashboard button {
+        scale: 1.2;
+    }
+
+    .dashboard h2 {
+        display: none;
+    }
+
+    .sideElements {
+        align-content: center;
+        background-color: none;
+    }
+
+    .sideElements span {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .sideContainer {
+        background-color: #3f3f46;
+        box-shadow: 0 4px 7px 0;
+    }
 }
 
 .sideContainer {
     height: 100%;
     min-width: 5%;
     position: fixed;
-    background-color: #3f3f46;
-    box-shadow: 0 4px 7px 0;
 }
 
 .dashboard {
@@ -128,12 +180,16 @@ body {
     align-items: center;
     gap: 15px;
     padding: 20px;
-    color: white;
+    color: #fefefe;
 }
 
-.sideContainer button {
+.dashboard button {
+    border-radius: 5px;
+    color: #fefefe;
+    background-color: rgb(33, 143, 216);
     height: 30px;
     width: 40px;
+    transition: 0.5s;
 }
 
 .sideElements {
@@ -151,7 +207,7 @@ body {
     display: block;
     padding: 20px;
     font-size: 20px;
-    color: white;
+    color: #fefefe;
 }
 
 .sideElements svg {
@@ -161,21 +217,35 @@ body {
 @media (min-width: 700px) {
     .projectsGrid { 
         display: grid;
-        grid-template-columns: repeat(2, minmax(300px, 1fr));   
+        grid-template-columns: repeat(2, minmax(300px, 1fr)); 
     }
   }
 
 .projects {
     grid-column: 2 / 3;
-    grid-row: 2 / 10;
     padding-left: 15px;
     background-color: #687a94;
     display: grid;
 }
 
-.projectsGrid {
-    gap: 1em;
-    height: 100%;
+.projects h2 {
+    color: #fefefe;
+}
+
+@media screen and (max-width: 700px) {
+    .projects {
+        grid-column: 1 / 4;
+    }
+
+    .projectsGrid {
+        row-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .projectsGrid {
+        gap: 1em;
+    }
 }
 
 .projects img {
