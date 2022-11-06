@@ -215,7 +215,6 @@ body {
     padding-right: 10px;
 }
 
-
 .projects {
     grid-column: 2 / 3;
     background-color: #687a94;
@@ -229,7 +228,7 @@ body {
         grid-template-columns: repeat(2, minmax(300px, 1fr));
         box-sizing: border-box; 
     }
-  }
+}
 
 .projects h2 {
     color: #fefefe;
@@ -300,7 +299,6 @@ body {
     border-radius: 10px;
 }
 
-
 .trending {
     align-items: center;
     display: flex;
@@ -313,3 +311,27 @@ body {
     height: 70px;
 }
 
+@media screen and (max-width: 700px) {
+    footer {
+        grid-column: 1 / 4;
+    }
+}
+
+footer {
+    grid-column: 1 / 4;
+}    
+
+.footer {
+    background-color: #475569;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    color: #fefefe;
+    padding: 15px;
+}
+
+.footer a:visited {
+    color: #fefefe;
+}
