@@ -285,11 +285,11 @@ body {
 }
 
 .topHalf article:nth-child(2) {
-    box-shadow: 0 5px 4px -2px  black;
+    box-shadow: 0 5px 3px -3px  black;
 }
 
 .topHalf article:nth-child(3) {
-    box-shadow: 0 7px 4px -2px  black;
+    box-shadow: 0 7px 3px -3px  black;
 }
 
 .lowerHalf {
@@ -313,7 +313,3 @@ body {
     height: 70px;
 }
 
-footer {
-    grid-column: 2 / 3;
-    grid-row: 5 / 7;
-}
