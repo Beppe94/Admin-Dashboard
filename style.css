@@ -215,13 +215,6 @@ body {
     padding-right: 10px;
 }
 
-@media (min-width: 700px) {
-    .projectsGrid { 
-        display: grid;
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
-        box-sizing: border-box; 
-    }
-  }
 
 .projects {
     grid-column: 2 / 3;
@@ -230,13 +223,21 @@ body {
     padding: 15px;
 }
 
+@media (min-width: 700px) {
+    .projectsGrid { 
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        box-sizing: border-box; 
+    }
+  }
+
 .projects h2 {
     color: #fefefe;
 }
 
 @media screen and (max-width: 700px) {
     .projects {
-        grid-column: 1 / 4;
+        grid-column: 1 / 3;
     }
 }
 
